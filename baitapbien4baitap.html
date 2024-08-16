@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Bài tập biến, kiểu dữ liệu và toán tử 4 bài tập gộp</title>
+</head>
+<body>
+<script>
+<!--    bài tập 1 nhập điểm lý, hóa, sinh và tính tổng, điểm trung bình -->
+    let nhapDiemLy = parseInt(prompt("mời bạn nhập điểm cho môn Vật Lý"));
+    let nhapDiemHoa = parseInt(prompt("mời bạn nhập điểm cho môn Hóa Học"));
+    let nhapDiemSinh = parseInt(prompt("mời bạn nhập điểm cho môn Sinh Học"));
+    let tong = nhapDiemLy+nhapDiemHoa+nhapDiemSinh;
+    let dtb =  (nhapDiemLy+nhapDiemHoa+nhapDiemSinh)/3;
+    alert ("tổng điểm = "+ tong +" điểm trung bình " + dtb);
+// Bài tập 2 nhập giá trị độ celsius và chuyển sang độ F, C/5 = (F-32)/9
+    let nhapDoCelsius = parseInt(prompt("mời bạn nhập độ celsius "));
+    let doFahrenheit= nhapDoCelsius*9/5 + 32;
+    alert ("chuyển đổi sang độ F là "+ doFahrenheit + "F");
+
+//  Bài tập 3 Viết chương trình tính diện tích hình tròn
+    let banKinh = parseInt(prompt(" mời bạn nhập bán kính hình tròn"));
+    let dienTich = Math.PI*(banKinh**2);
+    alert ("diện tích hình tròn là: "+dienTich);
+// Bài tập 4 Viết chương trình chu vi hình tròn
+    let chuVi=2*Math.PI*banKinh;
+    alert ("chu vi hình tròn là " + chuVi);
+
+</script>
+</body>
+</html>
