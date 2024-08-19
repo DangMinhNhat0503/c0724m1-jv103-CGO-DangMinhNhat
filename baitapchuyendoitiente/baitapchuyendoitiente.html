@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><form action="baitapchuyendoitiente.js" method="get">
+            <label><input type="number" id="soTien" placeholder="Số Tiền" size="12"></label></form></td>
+        <td>
+            <label>
+                <select id="from">
+                    <option value="vietnam">Việt Nam</option>
+                    <option value="usd">USD</option>
+                </select>
+            </label>
+        </td>
+        <td>
+            <label>
+                <select id="to">
+                    <option value="usd">USD</option>
+                    <option value="vietnam">Việt Nam</option>
+                </select>
+            </label>
+        </td>
+        <td><button onclick="chuyendoi()">Chuyển đổi</button></td>
+    </tr>
+</table>
+<script src="baitapchuyendoitiente.js"></script>
+<div id="kq"></div>
+</body>
+</html>
