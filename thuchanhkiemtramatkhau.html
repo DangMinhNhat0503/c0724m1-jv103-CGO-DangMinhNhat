@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("mời bạn nhập tên đăng nhập");
+    console.log(typeof a);
+    if (a==="Admin"){
+        let b = prompt("mời bạn nhập mật khẩu");
+        if (b==="TheMaster") {
+            console.log("Welcome");
+        }
+        else if (b===null){
+            console.log("cancel");
+        }
+        else {
+            console.log("i don't know you");
+        }
+    }
+    else if (a===null) {
+        console.log("cancel");
+    }
+    else {
+        console.log("i don't know");
+    }
+</script>
+</body>
+</html>
