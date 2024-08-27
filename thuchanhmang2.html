@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [-3,5,1,3,2,10];
+    // array[0] = array[5];
+    // // array.push(2);
+    // // console.log(array[0]);
+    // for (let i=0; i<array.length; i++){
+    //     console.log(array[i]);
+    // }
+    // sử dung reverse()
+    // console.log(array.reverse());
+    // không sử dụng reverse()
+    let first = 0;
+    let last = array.length - 1;
+    while (first < last) {
+        let b = array[first];
+        array[first] = array[last];
+        array[last] = b;
+        first++;
+        last--;
+    }
+    document.write(array);
+    console.log(array);
+    document.write(array.toString());
+
+</script>
+</body>
+</html>
