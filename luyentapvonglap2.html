@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: In dãy Fibonaci
+//     let num = Number(prompt("enter one number"));
+//     while(!Number.isInteger(num) || num<0){
+//         num=Number(prompt("enter number again pls "));
+//     }
+//     if (num === 0) {
+//         document.writeln(0);
+//     }
+//     else {
+//         function fib(num) {
+//             if (num <= 2) {
+//                 return 1;
+//             } else {
+//                 return fib(num - 1) + fib(num - 2);
+//             }
+//         }
+//     }
+// document.writeln(fib(num));
+
+
+    // Bài 2: Tính giai thừa của một số nguyên dương
+    //     let num = Number(prompt("enter one number"));
+    //     while(!Number.isInteger(num) || num<0){
+    //         num=Number(prompt("enter number again pls "));
+    //     }
+    //     let gth = 1;
+    //     for (let i = 1; i<=num; i++){
+    //         gth*=i;
+    //     }
+    //     document.writeln(gth);
+
+    // Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
+
+    //tam giác 1
+    //Cách 1
+    // let i;
+    // let j;
+    // for (i = 1; i<=5; i++){
+    //     document.write("<br>");
+    //     for (j = 1; j<=i; j++){
+    //         document.write("*");
+    //     }
+    // }
+
+
+    //tam giác 2
+    //Cách 1
+    // let i;
+    // let j;
+    // for (i = 1; i<=5; i++){
+    //     document.write("<br>");
+    //     for (j = 1; i+j<=6; j++){
+    //         document.write("*");
+    //     }
+    // }
+
+    //Cách 2
+    // let i;
+    // let j;
+    // for (i = 1; i<=5; i++) {
+    //     for (j = 5; j >= i; j--) {
+    //             document.write("*")
+    //         }
+    //     document.write("<br>");
+    // }
+
+
+    //tam giác 3
+    // let i;
+    // let j;
+    // for (i = 1; i<=5; i++) {
+    //     for (j = 5; j >= 1; j--) {
+    //         if (j <= i) {
+    //             document.write(`*`);
+    //         }
+    //         else {
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+    //tam giác 4
+    // let i;
+    // let j;
+    // for (i =1; i<=5; i++) {
+    //     for (j = 1; j <= 5; j++) {
+    //         if (j >= i) {
+    //             document.write(`*`);
+    //         }
+    //         else {
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+    //Bài 4 In hình chữ nhật
+    // let i;
+    // let j;
+    // for (i = 1; i <= 7; i++){
+    //     for (j = 1; j<= 21; j++){
+    //         if (i === 1 || i === 7){
+    //             document.write("*");
+    //         }
+    //         else if (j === 1 || j === 21){
+    //             document.write("*");
+    //         }
+    //         else {
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // Bài 5 Viết chương trình tính lãi ngân hàng
+    // let amount = parseFloat(prompt("Mời bạn nhập vào số tiền gốc"));
+    // while(amount<0 || isNaN(amount)){
+    //     amount = parseFloat(prompt("Mời bạn nhập vào số tiền gốc"));
+    // }
+    // let month = Number(prompt("Mời bạn nhập vào số tháng"));
+    // while(!Number.isInteger(month) || month<0 || month >100){
+    //     month = Number(prompt("Mời bạn nhập vào số tháng"));
+    // }
+    // let interest = parseFloat(prompt("Mời bạn nhập vào lãi suất (trong khoảng từ 0% - 15%"));
+    // while(interest<0 || isNaN(interest) || interest>15){
+    //     interest = parseFloat(prompt("Mời bạn nhập vào lãi suất"));
+    // }
+    // function countSaving (a,b,c) {
+    //     let result;
+    //     result = a*Math.pow((1+c/100),b);
+    //     return result;
+    // }
+    // console.log(countSaving(amount,month,interest));
+
+    // Bài 6 : Vẽ hình trái tim
+
+</script>
+</body>
+</html>
