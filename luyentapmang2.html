@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //Bài 1 : gọi mảng 2 chiều
+    // let a = [
+    //     [1, 2, 1, 24],
+    //     [8, 11, 9, 4],
+    //     [7, 0, 7, 27],
+    //     [7, 4, 28, 14],
+    //     [3, 10, 26, 7]
+    // ];
+    // console.log(a);
+    // console.log(a[0]);
+    // console.log(a[0][1]);
+    // console.log(a.length);
+    // console.log(a[0].length);
+
+    // Cách 1:
+    // for (let i = 0; i<a.length; i++){
+    //     console.log("row "+i);
+    //     for (let j = 0; j<a[i].length ; j++){
+    //         console.log(a[i][j]);
+    //     }
+    // }
+
+    // Cách 2:  Cách này y chang vòng lặp for, i sẽ là index
+    // for (let i in a){
+    //     console.log("row " +i);
+    //     for (let j in a[i]){
+    //         console.log(a[i][j]);
+    //     }
+    // }
+
+    // Cách 3: i ở đây ko phải là index mà nó in nguyên các giá trị tại index đó
+    // for (let i of a){
+    //     console.log(i);
+    //     for (let j of i){
+    //         console.log(j);
+    //     }
+    // }
+
+    //Cách 4: index có hay ko cũng ko sao, index để hiện thị số lượng giá trị trong mảng hoặc vị trí của giá trị, for each sẽ là vòng lặp ko dừng và break ko thể sử dụng trong các hàm callback
+    // for (let i = 0; i<a[i].length; i++) {
+    //     a[i].forEach(function (x, index) {
+    //         console.log(x);
+    //     });
+    // }
+
+    //Bài 2:Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"
+    // let arr = [ 'c', 's', 'c', '2', '6', '1' ];
+    // console.log(arr.reverse());
+
+    //Bài 3 : Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.
+    // let arr = [];
+    // let a;
+    // while (true){
+    //     a = prompt("Mời bạn nhập vào giá trị");
+    //     arr.push(a);
+    //     let b = confirm("Bạn muốn tiếp tục nhập nữa không?");
+    //     if(b === false){
+    //         break;
+    //     }
+    // }
+    // console.log (arr);
+    // let count = 0;
+    // for (let i = 0; i<arr.length; i++){
+    //     if (!isNaN(parseFloat(arr[i]))){
+    //         count++;
+    //     }
+    // }
+    // console.log("số lượng ký tự số trong mảng là "+count);
+
+    //  Bài 4 : Viết một chương trình để đếm số từ trong một chuỗi
+    // let arr = [];
+    // let a;
+    // while (true){
+    //     a = prompt("Mời bạn nhập vào giá trị");
+    //     arr.push(a);
+    //     let b = confirm("Bạn muốn tiếp tục nhập nữa không?");
+    //     if(b === false){
+    //         break;
+    //     }
+    // }
+    // console.log (arr);
+    // let count = 0;
+    // for (let i = 0; i<arr.length; i++){
+    //     if (isNaN(parseFloat(arr[i]))){
+    //         count++;
+    //     }
+    // }
+    // console.log("số lượng ký tự là chữ trong mảng là "+count);
+
+    //Bài 5 : Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    //
+    // let arr1 = [];
+    // let arr2 = [];
+    //
+    // let a;
+    // while (true){
+    //     a = prompt("Mời bạn nhập vào giá trị cho mảng 1");
+    //     arr1.push(a);
+    //     let b = confirm("Bạn muốn tiếp tục nhập giá trị cho mảng 1 nữa không?");
+    //     if(b === false){
+    //         break;
+    //     }
+    // }
+    // console.log (arr1);
+    //
+    // let c;
+    // while (true){
+    //     c = prompt("Mời bạn nhập vào giá trị cho mảng 2");
+    //     arr2.push(c);
+    //     let d = confirm("Bạn muốn tiếp tục nhập giá trị cho mảng 2 nữa không?");
+    //     if(d === false){
+    //         break;
+    //     }
+    // }
+    //
+    // let x = 0;
+    // console.log(arr2);
+    // if (arr1.length !== arr2.length){
+    //     console.log("2 mảng khác nhau");
+    // }
+    // else {
+    //     for(let i = 0; i<arr1.length ;i++) {
+    //         if (arr1[i] !== arr2[i]) {
+    //             console.log("2 mảng khác nhau");
+    //             break;
+    //         }
+    //         else {
+    //             x++;
+    //         }
+    //     }
+    //     if (x === arr1.length){
+    //         console.log("Chúc mừng 2 mảng giống nhau");
+    //     }
+    // }
+
+    // Bài 6 Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+    let arr = [];
+    let a;
+    while (true){
+        a = prompt("Mời bạn nhập vào giá trị");
+        arr.push(a);
+        let b = confirm("Bạn muốn tiếp tục nhập nữa không?");
+        if(b === false){
+            break;
+        }
+    }
+    console.log (arr);
+
+    for (let i = 0; i<arr.length; i++){
+        if (a[i] === `-`){
+            a[i] = `_`;
+        }
+    }
+    console.log (arr);
+</script>
+</body>
+</html>

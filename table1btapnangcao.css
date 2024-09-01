@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #e1b358; background-color: #202020}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #95b84f; background-color: #202020}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #acacac; background-color: #202020}
+    span.s1 {color: #bf6426}
+    span.s2 {color: #99a8ba}
+    span.s3 {color: #acacac}
+    span.s4 {color: #5684ad}
+    span.s5 {color: #95b84f}
+  </style>
+</head>
+<body>
+<p class="p1">table<span class="s1">, </span>th<span class="s1">, </span>td <span class="s2">{</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">border</span><span class="s2">:</span><span class="s4">3</span>px solid black<span class="s1">;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span></span>border-collapse<span class="s2">: </span><span class="s5">collapse</span><span class="s1">;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span></span>padding<span class="s2">: </span><span class="s4">4</span><span class="s5">px</span><span class="s1">;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span></span>text-space<span class="s2">: </span><span class="s4">5</span><span class="s5">px</span><span class="s1">;</span></p>
+</body>
+</html>
