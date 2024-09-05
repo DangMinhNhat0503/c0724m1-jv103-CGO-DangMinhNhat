@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<button onclick="alertMessage()"> Hiển thị lời chào</button>-->
+
+<!--<input type="text" id="so">Mời bạn nhập số-->
+<!--<button onclick="increase()"> giá trị mới</button>-->
+<!--<p id="result"></p>-->
+
+<script>
+
+    //Bài 1 :
+    // function alertMessage(){
+    //     alert("Xin chào");
+    // }
+
+    //Bài 2 :
+    // function increase(){
+    //     let x = parseInt(document.getElementById("so").value);
+    //     if (isNaN(x)){
+    //         alert("Mời bạn nhập lại ký tự số");
+    //         document.getElementById("so").value = "";
+    //     }
+    //     else {
+    //         let sum = x + 1;
+    //         document.getElementById("result").innerHTML = "giá trị mới " + sum;
+    //     }
+    // }
+
+    // Bài 3 : tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    // function sumIf(a,b){
+    //     let sum;
+    //     if(a>b){
+    //         return "số bạn nhập số thứ 1 lớn hơn số thứ 2";
+    //     }
+    //     else {
+    //         sum = a+b;
+    //         return sum;
+    //     }
+    // }
+    // let x = parseInt(prompt("Mời bạn nhập số thứ 1 "));
+    // while (isNaN(x)){
+    //     x = parseInt(prompt("Mời bạn nhập lại số thứ 1"));
+    // }
+    // let y = parseInt(prompt("Mời bạn nhập số thứ 2"));
+    // while (isNaN(y)){
+    //     y = parseInt(prompt("Mời bạn nhập lại số thứ 2"));
+    // }
+    // alert(sumIf(x,y));
+
+    //  Bài 4 :
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     return result;
+    //
+    // }
+    // result = 0;
+    // console.log(result);
+    // result = addNumbers();
+    // console.log(result);
+
+    // Bài 5:
+    // Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo.
+    // Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao.
+    // Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại tên chòm sao của ngôi sao đó.
+    // Trong phần <body> của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào.
+    // Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.
+    let arr1 = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let arr2 = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+    function checkStar (x) {
+        let a = prompt(`Mời bạn nhập vào tên của 1 trong 7 ngôi sao sau:
+        Polaris
+        Aldebaran
+        Deneb
+        Vega
+        Altair
+        Dubhe
+        Regulus`);
+        let b;
+        let c = false;
+        for (let i = 0; i<arr1.length; i++){
+            if (arr1[i] === x){
+                b = i;
+                c = true;
+                break;
+            }
+        }
+        if (c) {
+            alert(`chòm sao tương ứng của ngôi sao ${x} là ${arr2[b]}`);
+        }
+        else {
+            alert(`không tìm thấy chòm sao tương ứng`);
+        }
+    }
+    checkStar(a);
+
+
+</script>
+</body>
+</html>
