@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>ADD NEW PRODUCT</p>
+<label for="0">Name</label>
+<input id = "0" placeholder="new product"><button onclick="addNewFunction()">ADD</button>
+<br>
+<br>
+<br>
+<p id ="result"></p>
+
+
+<script>
+    let list = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple Iphone 6S"];
+    displayTable(list);
+
+
+function displayTable(list){
+let tableString = `<table border = 1px style = "border-collapse: collapse">
+    <tr>
+        <th>Product Name</th>
+        <th>Edit product</th>
+        <th>Delete product</th>
+    </tr>`
+    for (let i = 0; i<list.length; i++){
+        tableString += `
+    <tr>
+        <th>${list[i]}</th>
+        <th><button id = "1" onclick="editFunction(${i})">Edit</button></th>
+        <th><button id = "2" onclick="deleteFunction(${i})">Deleted</button></th>
+    </tr>`
+    }
+    tableString += `</table>`;
+    document.getElementById("result").innerHTML = tableString;
+}
+
+function addNewFunction(){
+    let a = document.getElementById("0").value;
+    if (a !== ""){
+        list.push(a);
+        document.getElementById("0").value="";
+        displayTable(list);
+    }
+    else {
+        alert("Yêu cầu nhập tên sản phẩm ");
+    }
+}
+function editFunction(index){
+    let b = prompt("mời bạn nhập vào thay đổi");
+    if (b !== "" || b !== null){
+        list[index] = b;
+        displayTable(list);
+    }
+    else {
+        alert("Yêu cầu nhập thay đổi")
+    }
+}
+
+function deleteFunction(index){
+    let c = confirm("Bạn có chắc chắn muốn xóa");
+    if (c){
+        list.splice(index,1);
+        displayTable(list);
+    }
+    else {
+        alert("bạn không muốn xóa");
+    }
+}
+
+
+
+</script>
+</body>
+</html>
