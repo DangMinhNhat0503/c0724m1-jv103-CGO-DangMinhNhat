@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = prompt("Mời bạn nhập vào 1 chuỗi ");
+
+    //  Cách 1 : không sử dụng đệ quy
+    // function isPalindrome(chuoi) {
+    //     let x = true;
+    //     for (let i = 0; i < chuoi.length / 2; i++) {
+    //         if (chuoi[i] !== chuoi[(chuoi.length - 1) - i]) {
+    //             x = false;
+    //             break;
+    //         }
+    //     }
+    //     if (x) {
+    //         alert("là chuỗi đối xứng");
+    //     }
+    //     else {
+    //         alert("không là chuỗi đối xứng");
+    //     }
+    //
+    // }
+    // isPalindrome(a);
+
+    // Cách 2 : sử dụng đệ quy
+    //- điểm chặn : chuoi.length < = 1
+    //- quy luật : cắt đầu và cuối làm lại
+    // function isPalindrome (chuoi) {
+    //     if (chuoi.length <= 1){
+    //         return true;
+    //     }
+    //     else if (chuoi[0] !== chuoi[chuoi.length - 1]){
+    //         return false;
+    //     }
+    //     else {
+    //         return isPalindrome(chuoi.slice(1,chuoi.length-1));
+    //     }
+    // }
+    // if (isPalindrome(a)) {
+    //     alert("là chuỗi đối xứng");
+    // }
+    // else {
+    //     alert("Không phải chuỗi đối xứng");
+    // }
+    //
+
+    // Mô tả: Viết một hàm đệ quy để tìm tất cả các tổ hợp của một chuỗi cho trước. Một tổ hợp là một tập hợp các ký tự trong chuỗi mà không quan tâm đến thứ tự.
+    //
+    //     Ví dụ:
+    //     Đầu vào: "abc"
+    // Đầu ra: ["", "a", "b", "c", "ab", "ac", "bc", "abc"]
+    // điểm chặn :
+    // quy luật :
+    // đặc điểm : đầu vào là chuoi, đầu ra là mảng
+
+    // biến chuỗi thành mảng (dùng for);
+    // dùng push để add tung ky tự vào
+
+</script>
+</body>
+</html>
