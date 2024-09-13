@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class myDate {
+        day;
+        month;
+        year;
+        getDay;
+        getMonth;
+        getYear;
+        setDay;
+        setMonth;
+        setYear;
+        constructor(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function (){
+                return this.day;
+            }
+            this.getMonth = function (){
+                return this.month;
+            }
+            this.getYear = function (){
+                return this.year;
+            }
+            this.setDay = function (day){
+                this.day = day;
+            }
+            this.setMonth = function (month){
+                this.month = month;
+            }
+            this.setYear = function (year){
+                this.year = year;
+            }
+        }
+        changeString (){
+            let formatDay = this.day.toString().padStart(2,"0");
+            let formatMonth = this.month.toString().padStart(2,"0");
+            return `${formatDay}/${formatMonth}/${this.year}`;
+        }
+
+    }
+    let date = new myDate(2,2,2007);
+
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2019);
+
+    date.setDay(5);
+    date.setMonth(3);
+    date.setYear(1991);
+
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day+ "/"+month+ "/" +year);
+
+    console.log(day.toString()+month.toString()+year.toString());
+    console.log(date.changeString());
+
+
+    
+</script>
+</body>
+</html>
