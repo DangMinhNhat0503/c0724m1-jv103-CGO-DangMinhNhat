@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+    class Rectangle {
+        length;
+        width;
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        getPerimeter (){
+            return (this.length+this.width)*2;
+        }
+
+        getArea (){
+            return this.length*this.width;
+        }
+
+        drawRectangle(){
+            let canvas = document.getElementById("myCanvas");
+            let context = canvas.getContext("2d");
+            context.beginPath();
+            context.rect(50, 50, this.length, this.width);
+            context.strokeStyle = "blue";
+            context.lineWidth = 5;
+            context.stroke();
+        }
+    }
+
+    let rectangle1 = new Rectangle(9,4);
+    let perimeter = rectangle1.getPerimeter();
+    let area = rectangle1.getArea();
+
+    alert("chu vi hinh chu nhat: "+perimeter+ "; dien tich hinh chu nhat: "+area);
+
+    rectangle1.length = 100;
+    rectangle1.width = 80;
+    let perimeter1 = rectangle1.getPerimeter();
+    let area1 = rectangle1.getArea();
+    alert("chu vi hinh chu nhat: "+perimeter1+ "; dien tich hinh chu nhat: "+area1);
+
+    rectangle1.drawRectangle();
+
+
+</script>
+</body>
+</html>
