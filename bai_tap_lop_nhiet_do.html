@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperature{
+        celsius;
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        convertCtoF () {
+            return this.celsius*9/5+32;
+        }
+        convertCtoK () {
+            return this.celsius + 273.15;
+        }
+    }
+
+    let input = prompt("Mời bạn nhập vào độ C ");
+    let check;
+    let inputNon;
+    do {
+        check = true;
+        if (input === ""){
+            input = prompt("Bạn chưa nhập gì cả ");
+            check = false;
+        }
+        else if (input === null){
+            alert("bạn đã thoát");
+            check = true;
+        }
+        else {
+            inputNon = Number(input);
+            if (!Number.isInteger(inputNon) || inputNon<-273){
+                input = prompt("Mời bạn nhập là số nguyên lớn hơn -273 và không phải ký tự chữ");
+                check = false;
+            }
+        }
+    } while (check === false)
+
+    let temperature1 = new temperature(inputNon);
+    let resultF = temperature1.convertCtoF();
+    let resultK = temperature1.convertCtoK();
+
+    alert ("nhiệt độ F: "+resultF+ "; nhiệt độ K: "+resultK);
+
+
+</script>
+</body>
+</html>
