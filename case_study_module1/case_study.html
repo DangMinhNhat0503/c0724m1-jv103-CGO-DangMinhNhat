@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CASE STUDY: FOOD IN SUPERMARKET</title>
+    <link rel="stylesheet" href="case_study.css">
+</head>
+<body>
+<div class="search">
+    <input
+        type="search"
+        id="input"
+        placeholder="nhập vào sản phẩm cần tìm "
+    />
+    <button id="button" onclick="searchProduct()">Tìm Kiếm</button>
+</div>
+<div id="buttons">
+    <button class="button-value" onclick="filter('All')">All</button>
+    <button class="button-value" onclick="filter('Heo')">Heo</button>
+    <button class="button-value" onclick="filter('Bò')">Bò</button>
+    <button class="button-value" onclick="filter('Gà')">Gà</button>
+    <button class="button-value" onclick="filter('Vịt')">Vịt</button>
+    <button class="button-value" onclick="filter('Tôm')">Tôm</button>
+    <button class="button-value" onclick="filter('Cua')">Cua</button>
+    <button class="button-value" onclick="filter('Cá')">Cá</button>
+</div>
+<div id="products"></div>
+
+<script src ="case_study.js"></script>
+</body>
+</html>
