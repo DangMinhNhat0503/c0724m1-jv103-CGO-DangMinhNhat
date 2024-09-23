@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+    <link rel="stylesheet" href="bai_tap_4_css.css">
+</head>
+<body>
+<h1 style="text-align: center">Quản lý công nhân</h1>
+<p id="view"></p>
+<script>
+class Worker {
+    STT;
+    Name;
+    DOB;
+    Address;
+    Salary;
+    Position;
+
+    constructor(STT, Name, DOB, Address, Salary, Position) {
+        this.STT = STT;
+        this.Name = Name;
+        this.DOB = DOB;
+        this.Address = Address;
+        this.Salary = Salary;
+        this.Position = Position;
+    }
+}
+
+let workers = [];
+workers.push(new Worker(1,"Trương Tấn A","1997-11-11","Quảng Nam",2000,"Abc"));
+workers.push(new Worker(2,"Trương Tấn B","1998-11-11","Đà Nẵng",2000,"Abc"));
+workers.push(new Worker(2,"Trương Tấn C","1999-11-11","Huế",2000,"Abc"));
+
+function display () {
+    workers.sort((a,b)=> {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    })
+    let temp = `<table class ="table" style="text-align: center" border = "1">`;
+    temp += `<tr>`;
+    temp += `<th>STT</th>`;
+    temp += `<th>Họ và tên</th>`;
+    temp += `<th>Ngày sinh</th>`;
+    temp += `<th>Địa chỉ</th>`;
+    temp += `<th>Lương</th>`;
+    temp += `<th>Chức vụ</th>`;
+    temp += `</tr>`;
+
+    for (let i = 0; i<workers.length; i++) {
+        if (i%2 === 0) {
+            temp += `<tr class="even">`;
+            temp += `<td>${workers[i].STT}</td>`;
+            temp += `<td>${workers[i].Name}</td>`;
+            temp += `<td>${workers[i].DOB}</td>`;
+            temp += `<td>${workers[i].Address}</td>`;
+            temp += `<td>${workers[i].Salary}</td>`;
+            temp += `<td>${workers[i].Position}</td>`;
+            temp += `</tr>`;
+        }
+        else {
+            temp += `<tr class="odd">`;
+            temp += `<td>${workers[i].STT}</td>`;
+            temp += `<td>${workers[i].Name}</td>`;
+            temp += `<td>${workers[i].DOB}</td>`;
+            temp += `<td>${workers[i].Address}</td>`;
+            temp += `<td>${workers[i].Salary}</td>`;
+            temp += `<td>${workers[i].Position}</td>`;
+            temp += `</tr>`;
+        }
+    }
+    temp += `</table>`;
+    document.getElementById("view").innerHTML= temp;
+}
+display();
+
+
+</script>
+</body>
+</html>

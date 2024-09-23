@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let n = prompt("Mời bạn nhập vào một số ");
+    let checkN;
+    do {
+        checkN = true;
+        if (n === ""){
+            n = prompt("Bạn chưa nhập gì cả ");
+            checkN = false;
+        }
+        else if (n === null){
+            alert("bạn đã thoát");
+            checkN = true;
+        }
+        else {
+            let nParse = Number(n);
+            if (!Number.isInteger(nParse) || nParse<=0){
+                n = prompt("Mời bạn nhập lại là số nguyên dương khác không không phải ký tự chữ ");
+                checkN = false;
+            }
+        }
+    } while (checkN === false);
+
+    let parseN = parseInt(n);
+
+    function checkPerfectNum (x) {
+        let sum = 0;
+        for (let i = 1; i<x; i++){
+            if(x%i === 0){
+                sum += i;
+            }
+        }
+        if (sum === x) {
+            console.log("True");
+        }
+        else {
+            console.log("False");
+        }
+    }
+
+    checkPerfectNum(parseN);
+
+</script>
+</body>
+</html>

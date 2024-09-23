@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let n = prompt("Mời bạn nhập vào độ dài của mảng ");
+    let checkN;
+    do {
+        checkN = true;
+        if (n === ""){
+            n = prompt("Bạn chưa nhập gì cả ");
+            checkN = false;
+        }
+        else if (n === null){
+            alert("bạn đã thoát");
+            checkN = true;
+        }
+        else {
+            let nParse = Number(n);
+            if (!Number.isInteger(nParse) || nParse>50){
+                n = prompt("Mời bạn nhập lại là số nguyên không phải ký tự chữ và nhỏ hơn 50");
+                checkN = false;
+            }
+        }
+    } while (checkN === false);
+
+    let arr = [];
+    let input;
+    for (let i = 0; i<n; i++) {
+        input = prompt("Mời bạn nhập vào giá trị thứ " + (i + 1) + " của mảng");
+        let check;
+        do {
+            check = true;
+            if (input === "") {
+                input = prompt("Bạn chưa nhập gì cả ");
+                check = false;
+            } else if (input === null) {
+                alert("bạn đã không nhập gì cả");
+                check = false;
+            } else {
+                let inputNew = Number(input);
+                if (!Number.isInteger(inputNew)) {
+                    input = prompt("Mời bạn nhập lại giá trị thứ " + (i + 1) + " là số nguyên và không phải ký tự chữ ");
+                    check = false;
+                }
+            }
+        } while (check === false);
+        let convertNUM = Number(input);
+        arr.push(convertNUM);
+    }
+    console.log(arr);
+
+    function calculateAvg (x) {
+        let sum = 0;
+        for (let i = 0; i<x.length; i++) {
+            sum += x[i];
+        }
+        return sum/(x.length);
+
+    }
+
+    console.log(`Số trung bình của mảng là ${calculateAvg(arr)}`);
+
+
+
+</script>
+
+</body>
+</html>

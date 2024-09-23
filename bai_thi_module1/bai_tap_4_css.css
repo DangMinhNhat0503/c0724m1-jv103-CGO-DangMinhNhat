@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.even {
+    background-color: white;
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid black;
+}
+
+.odd {
+    background-color: gray;
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid black;
+}
+
+.table {
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+}

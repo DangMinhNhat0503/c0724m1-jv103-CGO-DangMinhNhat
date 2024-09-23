@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+  let month = prompt("Mời bạn nhập vào tháng ");
+  // console.log(month.length);
+  let checkMonth;
+  do {
+    checkMonth = true;
+    if (month === ""){
+      month = prompt("Bạn chưa nhập gì cả ");
+      checkMonth = false;
+    }
+    else if (month === null){
+      alert("bạn đã thoát");
+      checkMonth = true;
+    }
+    else if(month.length <= 1){
+      month = prompt("Mời bạn nhập lại là tối thiểu 2 ký tự");
+      checkMonth = false;
+    }
+    else {
+      let monthParse = Number(month);
+      if (!Number.isInteger(monthParse) || monthParse <= 0 || monthParse > 12) {
+        month = prompt("Mời bạn nhập lại là số nguyên dương >0 và <12, đồng thời không phải ký tự chữ ");
+        checkMonth = false;
+      }
+    }
+  } while (checkMonth === false);
+
+  let parseMonth = parseInt(month);
+  // console.log(parseMonth);
+
+  // nhập năm
+  let year = prompt("Mời bạn nhập vào năm ");
+  let checkYear;
+  do {
+    checkYear = true;
+    if (year === ""){
+      year = prompt("Bạn chưa nhập gì cả ");
+      checkYear = false;
+    }
+    else if (year === null){
+      alert("bạn đã thoát");
+      checkYear = true;
+    }
+    else if(year.length > 4){
+      year = prompt("Mời bạn nhập lại là tối đa 4 ký tự");
+      checkYear = false;
+    }
+    else {
+      let yearParse = Number(year);
+      if (!Number.isInteger(yearParse) || yearParse <= 0 || yearParse > 3000) {
+        year = prompt("Mời bạn nhập lại là số nguyên dương >0 và <3000, đồng thời không phải ký tự chữ ");
+        checkYear = false;
+      }
+    }
+  } while (checkYear === false);
+
+  let parseYear = parseInt(year);
+  // console.log(parseYear);
+
+  function checkLeapYear (month, year) {
+    if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
+      console.log(31);
+    }
+    else if (month === 4 || month === 6 || month === 9 || month === 11) {
+      console.log(30);
+    }
+    else if (month === 2) {
+      if (year%400 !== 0 && year%100 === 0 || year%4 !==0) {
+        console.log(28);
+      }
+      else {
+        console.log(29);
+      }
+    }
+  }
+
+  checkLeapYear(parseMonth, parseYear);
+
+
+
+
+</script>
+</body>
+</html>
